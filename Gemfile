@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-gem "rails",                      "7.0.4"
+gem "rails",                      "7.2.2.1"
 gem "image_processing",           "1.12.2"
 gem "active_storage_validations", "0.9.8"
 gem "bcrypt",                     "3.1.18"
@@ -22,12 +22,12 @@ gem 'rdoc', '~> 6.11.0'
 gem "bootsnap",                   "1.12.0", require: false
 
 group :development, :test do
-  gem "sqlite3", "1.4.2"
+  gem "sqlite3", "1.5"
   gem "debug",   "1.5.0", platforms: %i[ mri mingw x64_mingw ]
 end
 
 group :development do
-  gem "web-console", "4.2.0"
+  gem 'pry-rails'
 end
 
 group :test do
@@ -41,10 +41,6 @@ group :test do
   gem "guard-minitest",           "2.4.6"
 end
 
-group :production do
-  gem "pg",         "1.3.5"
-  gem "aws-sdk-s3", "1.114.0", require: false
-end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem.
 # Uncomment the following line if you're running Rails
